@@ -115,28 +115,19 @@
 
     <!-- Hero Section -->
     <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-       <div class="absolute inset-0 -z-10 bg-slate-50">
+        <div class="absolute inset-0 -z-10 bg-slate-50">
 
-            <!-- Soft radial core glow -->
+            <!-- center glow -->
             <div class="absolute inset-0 flex items-center justify-center">
-            <div class="w-[500px] h-[500px] rounded-full bg-blue-300 opacity-20 blur-[140px]"></div>
+                <div class="w-[650px] h-[650px] rounded-full bg-emerald-300 opacity-20 blur-[160px]"></div>
             </div>
 
-            <!-- Node-edge graph -->
-            <svg class="absolute inset-0 opacity-25" xmlns="http://www.w3.org/2000/svg">
-                <!-- Nodes -->
-                <circle cx="20%" cy="30%" r="4" fill="#64748b" />
-                <circle cx="45%" cy="50%" r="4" fill="#64748b" />
-                <circle cx="70%" cy="35%" r="4" fill="#64748b" />
-                <circle cx="30%" cy="70%" r="4" fill="#64748b" />
-                <circle cx="75%" cy="70%" r="4" fill="#64748b" />
-
-                <!-- Edges -->
-                <line x1="20%" y1="30%" x2="45%" y2="50%" stroke="#94a3b8" stroke-width="1" />
-                <line x1="45%" y1="50%" x2="70%" y2="35%" stroke="#94a3b8" stroke-width="1" />
-                <line x1="45%" y1="50%" x2="30%" y2="70%" stroke="#94a3b8" stroke-width="1" />
-                <line x1="70%" y1="35%" x2="75%" y2="70%" stroke="#94a3b8" stroke-width="1" />
-            </svg>
+        <!-- System layers -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-40">
+            <div class="absolute w-[700px] h-[700px] rounded-full border border-slate-300"></div>
+            <div class="absolute w-[500px] h-[500px] rounded-full border border-slate-300"></div>
+            <div class="absolute w-[300px] h-[300px] rounded-full border border-slate-300"></div>
+        </div>
 
         </div>
 
