@@ -3,30 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Explicitly mentioning Workshop in the title -->
     <title>AutoSys @ MobiSys'26</title>
-    
-    <!-- SEO & Social Sharing Meta Tags -->
+
     <meta name="description" content="The 1st Workshop on Mobile Agentic Systems, co-located with MobiSys 2026.">
     <meta property="og:title" content="AutoSys 2026 | Workshop on Mobile Agentic Systems">
-    <meta property="og:description" content="Call for Papers: The 1st Workshop on OMobile Agentic Systems, co-located with MobiSys 2026 in Cambridge, UK.">
+    <meta property="og:description" content="Call for Papers: The 1st Workshop on Mobile Agentic Systems, co-located with MobiSys 2026 in Cambridge, UK.">
     <meta property="og:type" content="website">
-    <!-- <meta property="og:image" content="https://your-website.com/social-preview.png"> -->
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter for UI, JetBrains Mono for "Code/OS" feel, Merriweather for headers -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&family=Merriweather:ital,wght@0,300;0,700;0,900;1,300&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
+
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
@@ -42,32 +35,32 @@
                         academic: {
                             50: '#f0f9ff',
                             100: '#e0f2fe',
-                            600: '#0284c7', // Sky Blue for links
+                            600: '#0284c7',
                             800: '#075985',
-                            900: '#0c4a6e', // Deep Navy
+                            900: '#0c4a6e',
                         },
                         agent: {
-                            accent: '#10b981', // Emerald green for "Active/Running" state
+                            accent: '#10b981',
                         }
                     }
                 }
             }
         }
     </script>
+
     <style>
-        /* Custom scrollbar for code blocks or sidebars */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #f1f1f1; 
+            background: #f1f1f1;
         }
         ::-webkit-scrollbar-thumb {
-            background: #cbd5e1; 
+            background: #cbd5e1;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; 
+            background: #94a3b8;
         }
     </style>
 </head>
@@ -77,21 +70,18 @@
     <nav class="fixed w-full bg-white/90 backdrop-blur-sm border-b border-slate-200 z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <!-- Logo area -->
                 <div class="flex-shrink-0 flex items-center gap-2">
                     <img src="icon.png" alt="Logo" class="w-8 h-8 rounded-full">
-                    <!-- Added 'Workshop' to the navbar brand for clarity -->
                     <span class="font-serif font-bold text-xl tracking-tight text-slate-900">AutoSys Workshop 2026</span>
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#about" class="text-slate-600 hover:text-academic-800 transition-colors">Call for Papers</a>
                     <a href="#topics" class="text-slate-600 hover:text-academic-800 transition-colors">Topics</a>
                     <a href="#dates" class="text-slate-600 hover:text-academic-800 transition-colors">Dates</a>
+                    <a href="#program" class="text-slate-600 hover:text-academic-800 transition-colors">Program</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="flex items-center md:hidden">
                     <button id="mobile-menu-btn" type="button" class="text-slate-500 hover:text-slate-800 focus:outline-none p-2" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
@@ -101,12 +91,12 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel (Hidden by default) -->
         <div class="hidden md:hidden border-t border-slate-100 bg-white" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
                 <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-academic-800 hover:bg-slate-50">Call for Papers</a>
                 <a href="#topics" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-academic-800 hover:bg-slate-50">Topics</a>
                 <a href="#dates" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-academic-800 hover:bg-slate-50">Dates</a>
+                <a href="#program" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-academic-800 hover:bg-slate-50">Program</a>
                 <a href="#submission" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-academic-800 font-bold hover:bg-slate-50">Submit Paper</a>
             </div>
         </div>
@@ -115,19 +105,15 @@
     <!-- Hero Section -->
     <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div class="absolute inset-0 -z-10 bg-slate-50">
-
-            <!-- center glow -->
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-[650px] h-[650px] rounded-full bg-emerald-300 opacity-20 blur-[160px]"></div>
             </div>
 
-        <!-- System layers -->
-        <div class="absolute inset-0 flex items-center justify-center opacity-40">
-            <div class="absolute w-[700px] h-[700px] rounded-full border border-slate-300"></div>
-            <div class="absolute w-[500px] h-[500px] rounded-full border border-slate-300"></div>
-            <div class="absolute w-[300px] h-[300px] rounded-full border border-slate-300"></div>
-        </div>
-
+            <div class="absolute inset-0 flex items-center justify-center opacity-40">
+                <div class="absolute w-[700px] h-[700px] rounded-full border border-slate-300"></div>
+                <div class="absolute w-[500px] h-[500px] rounded-full border border-slate-300"></div>
+                <div class="absolute w-[300px] h-[300px] rounded-full border border-slate-300"></div>
+            </div>
         </div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -142,7 +128,7 @@
             <p class="text-xl md:text-2xl text-slate-600 font-light mb-8 max-w-3xl mx-auto">
                 The 1st Workshop on Mobile Agentic Systems
             </p>
-            
+
             <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12 text-slate-700 font-mono text-sm border-t border-b border-slate-100 py-6 bg-white/50 backdrop-blur-sm">
                 <div class="flex items-center gap-2">
                     <i data-lucide="calendar" class="w-5 h-5 text-academic-600"></i>
@@ -159,100 +145,152 @@
     <!-- Main Content Layout -->
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
-            <!-- Left Column: Main Content -->
+
+            <!-- Left Column -->
             <main class="lg:col-span-7 space-y-16">
-                
-                <!-- About / Overview -->
+
                 <section id="about" class="prose prose-slate max-w-none prose-headings:font-serif prose-headings:font-bold prose-a:text-academic-600">
-                    <h2  class="text-2xl font-serif font-bold text-slate-900 mb-6 flex items-center gap-2">Overview</h2>
+                    <h2 class="text-2xl font-serif font-bold text-slate-900 mb-6 flex items-center gap-2">Overview</h2>
                     <p>
                         Agentic computing has become more prominent than ever, driven by advancements in on-device LLMs, interest in cross-application automation, and involving humans in the loop of autonomous systems.
-                       <em>AutoSys</em> aims to provide a venue for presenting current research and technology trends and for debating future research agendas in autonomous agents.
+                        <em>AutoSys</em> aims to provide a venue for presenting current research and technology trends and for debating future research agendas in autonomous agents.
                     </p>
                     <p>
                         We solicit papers of 6 or fewer pages that present preliminary research in broad areas of mobile agents, including prototyping a system, experience in designing a novel technology, or a survey of useful tools for designing interdisciplinary systems and applications. We also encourage position papers that propose new research directions or advocate disruptive design ideas.
                     </p>
                 </section>
 
-                <!-- Topics of Interest -->
                 <section id="topics">
-    <h2 class="text-2xl font-serif font-bold text-slate-900 mb-6 flex items-center gap-2">
-        Topics of Interest
-    </h2>
-    <p class="mb-6 text-slate-600">Topics of interest include (but are not limited to):</p>
+                    <h2 class="text-2xl font-serif font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        Topics of Interest
+                    </h2>
+                    <p class="mb-6 text-slate-600">Topics of interest include (but are not limited to):</p>
 
-    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 md:p-8">
-        <ul class="space-y-4">
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 md:p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="layers" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">System Architecture for On-device Agents</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="workflow" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Workflow Automation and Tool Orchestration</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="scan" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Multimodal Sensing for Context-Aware Agents</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Security, Privacy, and Trust in Agent Actions</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="bot" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Large Language Models (LLMs) for Mobile Tasks</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="users" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Human-Agent Interaction (HAI) Systems</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="cpu" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Operating System Primitives for Autonomy</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="battery-charging" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Energy-Efficient Always-on Reasoning</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="network" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Agent Collaboration in IoT Networks</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="globe" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Real-world Deployment and Case Studies</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="bar-chart" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
+                                <span class="text-slate-700">Evaluation Benchmarks for Mobile Agents</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
 
-            <li class="flex items-start gap-3">
-                <i data-lucide="layers" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">System Architecture for On-device Agents</span>
-            </li>
+                <!-- Workshop Program -->
+                <section id="program">
+                    <h2 class="text-2xl font-serif font-bold text-slate-900 mb-6">Workshop Program</h2>
 
-            <li class="flex items-start gap-3">
-                <i data-lucide="workflow" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Workflow Automation and Tool Orchestration</span>
-            </li>
+                    <div class="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+                        <div class="mb-6">
+                            <h3 class="text-xl md:text-2xl font-serif font-bold text-slate-900">Keynote Speaker</h3>
+                            <p class="mt-2 text-slate-500">
+                                Dr. Xiaomin Ouyang, Assistant Professor at the Hong Kong University of Science and Technology.
+                            </p>
+                        </div>
 
-            <li class="flex items-start gap-3">
-                <i data-lucide="scan" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Multimodal Sensing for Context-Aware Agents</span>
-            </li>
+                        <div class="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-6 items-start">
+                            <div>
+                                <img
+                                    src="xiaomin-ouyang.jpg"
+                                    alt="Prof. Xiaomin Ouyang"
+                                    class="w-full max-w-[180px] rounded-lg object-cover border border-slate-200"
+                                >
+                            </div>
 
-            <li class="flex items-start gap-3">
-                <i data-lucide="shield-check" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Security, Privacy, and Trust in Agent Actions</span>
-            </li>
+                            <div class="space-y-4 text-slate-600 leading-8">
+                                <p>
+                                    <span class="font-semibold text-slate-800">Prof. Xiaomin Ouyang</span> is an Assistant Professor at HKUST and leads the Mobile, Intelligent, and Networked System (MINSys) Group. Her research focuses on empowering mobile and IoT devices with AI to create intelligent systems for real-world applications.
+                                </p>
 
-            <li class="flex items-start gap-3">
-                <i data-lucide="bot" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Large Language Models (LLMs) for Mobile Tasks</span>
-            </li>
+                                <p>
+                                    Her recent research interests include on-device and embodied AI, smart health, and mobile sensing. She previously worked as a postdoctoral researcher at the UCLA Networked and Embedded Systems Lab and received her Ph.D. degree from The Chinese University of Hong Kong in 2023.
+                                </p>
 
-            <li class="flex items-start gap-3">
-                <i data-lucide="users" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Human-Agent Interaction (HAI) Systems</span>
-            </li>
+                                <p>
+                                    She has received the ACM MobiSys Best Paper Award and the ACM SIGBED China Outstanding Doctoral Dissertation Award, and was recognized as one of the EECS Rising Stars in 2023.
+                                </p>
 
-            <li class="flex items-start gap-3">
-                <i data-lucide="cpu" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Operating System Primitives for Autonomy</span>
-            </li>
+                                <p class="text-slate-500">
+                                    Accepted papers and the detailed workshop schedule will be updated here soon.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-            <li class="flex items-start gap-3">
-                <i data-lucide="battery-charging" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Energy-Efficient Always-on Reasoning</span>
-            </li>
+                    <!-- Optional placeholder for future agenda -->
+                    <div class="mt-6 bg-slate-50 border border-slate-200 rounded-xl p-6">
+                        <h3 class="text-lg font-serif font-bold text-slate-900 mb-4">Tentative Agenda</h3>
+                        <div class="space-y-4">
+                            <div class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-slate-200 pb-4">
+                                <div class="w-36 flex-shrink-0 text-sm font-mono text-slate-500">09:00 - 09:15</div>
+                                <div class="text-slate-700">Opening Remarks</div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-slate-200 pb-4">
+                                <div class="w-36 flex-shrink-0 text-sm font-mono text-slate-500">09:15 - 10:00</div>
+                                <div class="text-slate-700">Keynote by Prof. Xiaomin Ouyang</div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-slate-200 pb-4">
+                                <div class="w-36 flex-shrink-0 text-sm font-mono text-slate-500">10:00 - 12:00</div>
+                                <div class="text-slate-700">Accepted Paper Session I <span class="text-slate-400">(TBA)</span></div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6">
+                                <div class="w-36 flex-shrink-0 text-sm font-mono text-slate-500">13:30 - 15:30</div>
+                                <div class="text-slate-700">Accepted Paper Session II / Discussion <span class="text-slate-400">(TBA)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-            <li class="flex items-start gap-3">
-                <i data-lucide="network" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Agent Collaboration in IoT Networks</span>
-            </li>
-
-            <li class="flex items-start gap-3">
-                <i data-lucide="globe" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Real-world Deployment and Case Studies</span>
-            </li>
-
-            <li class="flex items-start gap-3">
-                <i data-lucide="bar-chart" class="w-5 h-5 text-academic-600 mt-1 flex-shrink-0"></i>
-                <span class="text-slate-700">Evaluation Benchmarks for Mobile Agents</span>
-            </li>
-
-        </ul>
-    </div>
-</section>
-                
-                
-                <!-- Submission Guidelines -->
                 <section id="submission">
-                     <h2 class="text-2xl font-serif font-bold text-slate-900 mb-6">Submission Guidelines</h2>
-                     <div class="space-y-6">
-                        <p class="text-slate-600">Authors should submit via <a href="https://autosys26.hotcrp.com/" target="_blank" class="text-academic-600 underline hover:text-academic-800">HotCRP</a>. We solicit two types of submissions:</p>
-                        
+                    <h2 class="text-2xl font-serif font-bold text-slate-900 mb-6">Submission Guidelines</h2>
+                    <div class="space-y-6">
+                        <p class="text-slate-600">
+                            Authors should submit via
+                            <a href="https://autosys26.hotcrp.com/" target="_blank" class="text-academic-600 underline hover:text-academic-800">HotCRP</a>.
+                            We solicit two types of submissions:
+                        </p>
+
                         <div class="grid grid-cols-1 gap-6">
-                            <!-- Type 1 -->
                             <div class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                                 <div class="flex items-center gap-2 mb-3">
                                     <span class="bg-academic-100 text-academic-800 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Track 1</span>
@@ -266,7 +304,6 @@
                                 </p>
                             </div>
 
-                            <!-- Type 2 -->
                             <div class="border border-slate-200 rounded-lg p-6 hover:shadow-md transition-shadow">
                                 <div class="flex items-center gap-2 mb-3">
                                     <span class="bg-academic-100 text-academic-800 text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">Track 2</span>
@@ -277,74 +314,63 @@
                                 </p>
                                 <p class="text-sm text-slate-500">
                                     Suitable for more complete concepts, research results, experience reports, or comprehensive position papers.
-                                    <!-- Accepted papers may appear in the ACM Digital Library (authors may opt out). -->
                                 </p>
                             </div>
                         </div>
 
                         <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 text-sm text-slate-600 space-y-2">
-                             <p>All submissions must follow the <a href="https://www.acm.org/publications/proceedings-template" class="text-academic-600 underline hover:text-academic-800">ACM double-column conference format</a>. Font size no smaller than 10 points. The review process is single-blind, with each submission receiving at least two reviews.</p>
+                            <p>
+                                All submissions must follow the
+                                <a href="https://www.acm.org/publications/proceedings-template" class="text-academic-600 underline hover:text-academic-800">ACM double-column conference format</a>.
+                                Font size no smaller than 10 points. The review process is single-blind, with each submission receiving at least two reviews.
+                            </p>
                         </div>
-                     </div>
+                    </div>
                 </section>
             </main>
 
+            <!-- Right Column -->
+            <aside class="lg:col-span-5 space-y-8">
 
+                <div id="dates" class="bg-white text-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 relative overflow-hidden">
+                    <h3 class="font-serif text-lg font-bold mb-6 border-b border-slate-200 pb-2 text-slate-800">
+                        Important Dates
+                    </h3>
 
-<!-- Right Column: Sidebar (Dates & Info) -->
-<aside class="lg:col-span-5 space-y-8">
-                
-    <!-- Important Dates Box -->
-    <div id="dates" class="bg-white text-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 relative overflow-hidden">
+                    <ul class="space-y-5">
+                        <li class="relative pl-4 border-l-2 border-emerald-400">
+                            <div class="text-xs text-slate-500 font-mono">15 March, 2026 (AOE)</div>
+                            <div class="text-slate-800 font-semibold">Paper Submission Deadline</div>
+                        </li>
 
-        <!-- soft background accent (removed green tint) -->
-        <!-- (Deleted the previous bg-academic-100 blurred circle) -->
+                        <li class="relative pl-4 border-l-2 border-slate-300">
+                            <div class="text-xs text-slate-500 font-mono">30 March, 2026 (AOE)</div>
+                            <div class="text-slate-800 font-semibold">Notification of Acceptance</div>
+                        </li>
 
-        <h3 class="font-serif text-lg font-bold mb-6 border-b border-slate-200 pb-2 text-slate-800">
-            Important Dates
-        </h3>
+                        <li class="relative pl-4 border-l-2 border-slate-300">
+                            <div class="text-xs text-slate-500 font-mono">15 April, 2026 (AOE)</div>
+                            <div class="text-slate-800 font-semibold">Camera-Ready Deadline</div>
+                        </li>
 
-        <ul class="space-y-5">
+                        <li class="relative pl-4 border-l-2 border-slate-300">
+                            <div class="text-xs text-slate-500 font-mono">25 June, 2026 (AOE)</div>
+                            <div class="text-slate-800 font-semibold">Workshop Date</div>
+                        </li>
+                    </ul>
 
-            <li class="relative pl-4 border-l-2 border-emerald-400">
-                <div class="text-xs text-slate-500 font-mono">15 March, 2026 (AOE)</div>
-                <div class="text-slate-800 font-semibold">Paper Submission Deadline</div>
-            </li>
+                    <div class="mt-8 pt-4 border-t border-slate-200">
+                        <a
+                            href="https://autosys26.hotcrp.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="block w-full py-2 bg-emerald-300 hover:bg-emerald-400 text-black font-bold rounded-lg text-sm text-center transition-colors shadow-sm"
+                        >
+                            Paper Submission
+                        </a>
+                    </div>
+                </div>
 
-            <li class="relative pl-4 border-l-2 border-slate-300">
-                <div class="text-xs text-slate-500 font-mono">30 March, 2026 (AOE)</div>
-                <div class="text-slate-800 font-semibold">Notification of Acceptance</div>
-            </li>
-
-            <li class="relative pl-4 border-l-2 border-slate-300">
-                <div class="text-xs text-slate-500 font-mono">22 April, 2026 (AOE)</div>
-                <div class="text-slate-800 font-semibold">Camera-Ready Deadline</div>
-            </li>
-
-            <li class="relative pl-4 border-l-2 border-slate-300">
-                <div class="text-xs text-slate-500 font-mono">25 June, 2026 (AOE)</div>
-                <div class="text-slate-800 font-semibold">Workshop Date</div>
-            </li>
-
-        </ul>
-
-        <div class="mt-8 pt-4 border-t border-slate-200">
-            <a 
-                href="https://autosys26.hotcrp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block w-full py-2 bg-emerald-300 hover:bg-emerald-400 text-black font-bold rounded-lg text-sm text-center transition-colors shadow-sm"
-            >
-                Paper Submission
-            </a>
-        </div>
-    </div>
-
-
-
-
-            
-            <!-- Organizers -->
                 <div class="bg-white border border-slate-200 rounded-lg p-6">
                     <h3 class="font-serif font-bold text-slate-900 mb-4">Organizing Committee</h3>
                     <div class="space-y-6">
@@ -368,15 +394,14 @@
                             <p class="text-sm font-bold text-slate-900">Ningning Hou <span class="text-slate-400 text-xs font-normal">(Publicity Chair)</span></p>
                             <p class="text-xs text-slate-500 mt-0.5">Macquarie University</p>
                         </div>
-                        
+
                         <div class="pt-4 border-t border-slate-100">
                             <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Primary Contact</h4>
                             <a href="mailto:huanqiy4@gmail.com" class="text-sm font-mono text-academic-600 hover:underline">huanqiy4@gmail.com</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Program Committee -->
+
                 <div class="bg-white border border-slate-200 rounded-lg p-6">
                     <h3 class="font-serif font-bold text-slate-900 mb-4">Technical Program Committee</h3>
                     <div class="space-y-4">
@@ -401,7 +426,7 @@
                             <p class="text-xs text-slate-500 mt-0.5">Rensselaer Polytechnic Institute</p>
                         </div>
                         <div>
-                            <p class="text-sm font-bold text-slate-900">Jaewon Choi </p>
+                            <p class="text-sm font-bold text-slate-900">Jaewon Choi</p>
                             <p class="text-xs text-slate-500 mt-0.5">Seoul National University Hospital</p>
                         </div>
                         <div>
@@ -454,23 +479,10 @@
                         </div>
                     </div>
                 </div>
-                
-
-                <!-- Footer / Logos -->
-                <!-- <div class="text-center">
-                    <p class="text-xs text-slate-400 mb-2">Sponsored by</p>
-                    <div class="flex justify-center gap-4 opacity-50 grayscale hover:grayscale-0 transition-all">
-                        <div class="h-8 bg-slate-200 rounded px-2 flex items-center text-xs font-bold text-slate-500">ASPLOS</div>
-                        <div class="h-8 bg-slate-200 rounded px-2 flex items-center text-xs font-bold text-slate-500">ACM</div>
-                        <div class="h-8 bg-slate-200 rounded px-2 flex items-center text-xs font-bold text-slate-500">SIGARCH</div>
-                    </div>
-                </div> -->
-
             </aside>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-slate-50 border-t border-slate-200 py-12 mt-12">
         <div class="max-w-6xl mx-auto px-4 flex justify-center items-center gap-4">
             <p class="font-mono text-sm text-slate-500">
@@ -483,27 +495,23 @@
         </div>
     </footer>
 
-    <!-- Init Lucide Icons -->
     <script>
         lucide.createIcons();
     </script>
-    
-    <!-- Mobile Menu Logic -->
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             const links = document.querySelectorAll('.mobile-link');
 
-            if(btn && menu) {
-                // Toggle menu on button click
+            if (btn && menu) {
                 btn.addEventListener('click', function() {
                     const expanded = btn.getAttribute('aria-expanded') === 'true';
                     btn.setAttribute('aria-expanded', !expanded);
                     menu.classList.toggle('hidden');
                 });
 
-                // Close menu when a link is clicked
                 links.forEach(link => {
                     link.addEventListener('click', () => {
                         menu.classList.add('hidden');
